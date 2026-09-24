@@ -11,17 +11,12 @@ function HomePage() {
   };
 
   return (
-    <div style={{ maxWidth: 360, margin: "80px auto", textAlign: "center" }}>
+    <div style={{ maxWidth: 320, margin: "80px auto", padding: 24, border: "1px solid #ddd", borderRadius: 12, textAlign: "center" }}>
       {profile?.profileImageUrl && (
-        <img
-          src={profile.profileImageUrl}
-          alt="프로필"
-          style={{ width: 72, height: 72, borderRadius: "50%", marginBottom: 12 }}
-        />
+        <img src={profile.profileImageUrl} alt="프로필" style={{ width: 80, height: 80, borderRadius: "50%" }} />
       )}
-      <h2>🏠 {profile?.nickname ?? "회원"}님, 환영합니다!</h2>
-      <p style={{ color: "#666" }}>카카오 로그인으로 인증된 페이지입니다.</p>
-      <button onClick={handleLogout} style={{ padding: 12, width: "100%", marginTop: 16 }}>
+      <h2>{profile?.nickname ?? "회원"}님, 어서오세요!</h2>
+      <button onClick={handleLogout} style={{ width: "100%", padding: 12 }}>
         로그아웃
       </button>
     </div>
